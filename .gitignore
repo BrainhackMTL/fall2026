@@ -1,0 +1,12 @@
+.vscode/
+.venv/
+.DS_Store
+
+# uv
+.python-version
+uv.lock
+
+# Project specific
+_site/*.html
+data
+
