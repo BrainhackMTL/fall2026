@@ -22,15 +22,12 @@
   "project_callout": {
     "eyebrow": "Call for projects",
     "title": "Bring your research challenge. Build it with the community.",
-    "body": "Turn a technical roadblock, early-stage idea, or ongoing open-science project into a collaborative Brainhack project. Projects of every size are welcome, and first-time project leaders are encouraged to apply.",
-    "note": "Your project can take advantage of the GB10 systems below, but it does not need to be an AI or GPU project."
+    "body": "Turn a technical roadblock, early-stage idea, or ongoing open-science project into a collaborative Brainhack project. Projects of every size are welcome, and first-time project leaders are encouraged to apply."
   },
   "gb10_highlight": {
     "eyebrow": "Hackathon hardware",
     "title": "20 Dell Pro Max with GB10 systems available",
     "intro": "Thanks to the generous support of Dell Technologies and NVIDIA, attendees will have access to 20 compact AI workstations during the hackathon.",
-    "project_prompt": "Bring or propose projects involving local model inference, fine-tuning, generative AI, computer vision, or GPU-accelerated data science. Access instructions will be shared with registered attendees closer to the event.",
-    "compatibility_note": "Project leads: the GB10 uses a 20-core Arm CPU and Linux-based NVIDIA DGX OS. Please check that required containers and dependencies support Linux/Arm64.",
     "details_url": "https://www.dell.com/en-us/shop/desktop-computers/dell-pro-max-with-gb10/spd/dell-pro-max-fcm1253-micro"
   },
   "services": [
@@ -178,12 +175,6 @@
   "google_maps_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5707.914758273053!2d-73.58328056248493!3d45.50394356137919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a389350e9d1%3A0x6b0e79ae42e0786d!2sThomson%20House%2C%203650%20Rue%20McTavish%2C%20Montreal%2C%20QC%20H3A%201X9!5e0!3m2!1sen!2sca!4v1787243981585!5m2!1sen!2sca",
   "sponsors": [
     {
-      "name": "CIHR",
-      "url": "https://cihr-irsc.gc.ca/e/193.html",
-      "logo": "assets/sponsors/cihr.jpg",
-      "height": "200px"
-    },
-    {
       "name": "Dell",
       "url": "https://www.dell.com/",
       "logo": "assets/sponsors/dell.svg",
@@ -193,6 +184,12 @@
       "name": "Nvidia",
       "url": "https://www.nvidia.com/",
       "logo": "assets/sponsors/nvidia.png",
+      "height": "200px"
+    },
+    {
+      "name": "CIHR",
+      "url": "https://cihr-irsc.gc.ca/e/193.html",
+      "logo": "assets/sponsors/cihr.jpg",
       "height": "200px"
     }
   ],
