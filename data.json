@@ -2,7 +2,7 @@
   "title": "Brainhack Montreal Fall 2026",
   "location": "Montreal, QC, Canada",
   "city": "Montreal",
-  "dates": "October 2 (Tutorial) & 5–7 (hacking) 2026",
+  "dates": "October 2 (Tutorial) & 5-7 (hacking) 2026",
   "year": "2026",
   "background_img": "assets/banner-light.png",
   "color_theme": {
@@ -29,24 +29,6 @@
     "eyebrow": "Hackathon hardware",
     "title": "20 Dell Pro Max with GB10 systems available",
     "intro": "Thanks to the generous support of Dell Technologies and NVIDIA, attendees will have access to 20 compact AI workstations during the hackathon.",
-    "specs": [
-      {
-        "value": "NVIDIA GB10",
-        "label": "Grace Blackwell Superchip"
-      },
-      {
-        "value": "128 GB",
-        "label": "coherent unified memory"
-      },
-      {
-        "value": "Up to 1 PFLOP",
-        "label": "FP4 AI performance"
-      },
-      {
-        "value": "DGX OS",
-        "label": "NVIDIA AI software stack"
-      }
-    ],
     "project_prompt": "Bring or propose projects involving local model inference, fine-tuning, generative AI, computer vision, or GPU-accelerated data science. Access instructions will be shared with registered attendees closer to the event.",
     "compatibility_note": "Project leads: the GB10 uses a 20-core Arm CPU and Linux-based NVIDIA DGX OS. Please check that required containers and dependencies support Linux/Arm64.",
     "details_url": "https://www.dell.com/en-us/shop/desktop-computers/dell-pro-max-with-gb10/spd/dell-pro-max-fcm1253-micro"
