@@ -2,8 +2,21 @@ __author__ = "akeshavan"
 import glob
 import json
 import os
+import posixpath
+import shutil
+from urllib.parse import urlsplit, urlunsplit
 
 from jinja2 import Environment, FileSystemLoader
+
+
+def relative_url(url, from_directory="."):
+    """Resolve a site-relative URL from a generated file's directory."""
+    parts = urlsplit(url)
+    if not parts.path or parts.scheme or parts.netloc or parts.path.startswith("/"):
+        return url
+
+    path = posixpath.relpath(parts.path, start=from_directory)
+    return urlunsplit(("", "", path, parts.query, parts.fragment))
 
 
 def load_json(filename):
@@ -13,7 +26,7 @@ def load_json(filename):
     return data
 
 
-def load_projects(directory):
+def load_projects(directory, github_repo):
     """
     Scans the 'data/projects' directory for JSON files,
     loads them, and adds a link to the original GitHub issue.
@@ -29,11 +42,9 @@ def load_projects(directory):
         try:
             data = load_json(filename)
 
-            # Construct the issue URL based on the repo name
-            # You can also customize this if your repo changes
             if "issue_number" in data:
                 data["issue_url"] = (
-                    f"https://github.com/BrainhackMTL/winter2026/issues/{data['issue_number']}"
+                    f"https://github.com/{github_repo}/issues/{data['issue_number']}"
                 )
 
             projects.append(data)
@@ -52,10 +63,15 @@ files_to_generate = [
 ]
 
 env = Environment(loader=FileSystemLoader("./_site"))
+env.filters["relative_url"] = relative_url
 info = load_json("data.json")
 
+# GitHub Pages publishes only the generated ``_site`` directory. Copy static
+# assets into it so relative URLs in data.json are included in the deployment.
+shutil.copytree("assets", "_site/assets", dirs_exist_ok=True)
+
 # Load the project data and add it to the 'info' dictionary
-info["projects"] = load_projects("data/projects")
+info["projects"] = load_projects("data/projects", info["github_repo"])
 
 for f in files_to_generate:
     try:

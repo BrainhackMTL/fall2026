@@ -11,6 +11,8 @@
 
     <title>{{title}}</title>
 
+    <script>document.documentElement.classList.add('js');</script>
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -34,6 +36,31 @@
 
 <body>
 
+    <a class="skip-link" href="#details">Skip to main content</a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+        <div class="container site-nav-inner">
+            <a class="site-nav-brand" href="#top" aria-label="{{title}} — back to top">
+                <img class="site-nav-logo" src="assets/bhg-mtl.png" alt="" aria-hidden="true">
+                <span>Brainhack <strong>Montréal</strong></span>
+            </a>
+            <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+                <span class="sr-only">Open navigation menu</span>
+                <span class="site-nav-toggle-line" aria-hidden="true"></span>
+                <span class="site-nav-toggle-line" aria-hidden="true"></span>
+                <span class="site-nav-toggle-line" aria-hidden="true"></span>
+            </button>
+            <div class="site-nav-links" id="site-navigation">
+                <a href="#details">About</a>
+                <a href="#map">Location</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#projects">Projects</a>
+                <a href="#sponsors">Sponsors</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center text-center">
@@ -49,41 +76,32 @@
 				</div>
 		    </div>
 
-      <br>
-        <!--- Sold out <a href="{{registration_link}}" class="btn btn-dark btn-lg top5 left5">{{registration_text}}</a> --->
-        <a href="{{discord_link}}" target="_blank" class="btn btn-dark btn-lg top5 left5">Join on Brainhack Montreal Discord</a>
-        <a href="{{project_submit_link}}" target="_blank" class="btn btn-dark btn-lg top5 left5">Submit a Project</a>
-        <a href="{{project_link}}" target="_blank" class="btn btn-dark btn-lg top5 left5">Proposed projects</a><br><br>
+        <div class="hero-actions">
+            <!-- Sold out: <a href="{{registration_link}}" class="btn btn-dark btn-lg">{{registration_text}}</a> -->
+            <a href="{{discord_link}}" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-lg">Join on Brainhack Montreal Discord</a>
+            <a href="#projects" rel="noopener noreferrer" class="btn btn-dark btn-lg">How to submit a Project?</a>
+            <a href="#submitted-projects" class="btn btn-dark btn-lg">Submitted projects</a>
+        </div>
+        </div>
     </header>
     
     <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
     <section id="services" class="services bg-primary">
         <div class="container">
-            <div class="row text-center">
-                <!-- <hr class="small"> -->
-                <div class="row">
-                  {% for service in services %}
-                    <div class="col-md-3 col-sm-6">
-                        <div class="service-item">
-                            <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa {{service.fa_icon}} fa-stack-1x text-primary"></i>
-                        </span>
-                            <h4>
-                                <strong>{{service.name}}</strong>
-                            </h4>
-                            <p>{{service.short}}</p>
-                        </div>
+            <div class="services-grid">
+              {% for service in services %}
+                <article class="service-item">
+                    <span class="service-icon" aria-hidden="true">
+                        <i class="fa {{service.fa_icon}}"></i>
+                    </span>
+                    <div class="service-copy">
+                        <h4 class="service-title">{{service.name}}</h4>
+                        <p>{{service.short}}</p>
                     </div>
-                    {% endfor %}
-
-                </div>
-                <!-- /.row (nested)
+                </article>
+              {% endfor %}
             </div>
-            <!-- /.col-lg-10 -->
         </div>
-        <!-- /.row -->
     </section>
 
     <!-- Details -->
@@ -92,35 +110,37 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-8 col-xl-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-                    <p><h3 class="text-center">Why {{title}}?</h3></p>
-                    <p>Join us at the Montreal edition of Brainhack Global, a three-day event set to take place on {{dates}} at {{location_name}}! The {{title}} is part of the Brainhack Global initiative involving decentralized events that bring together researchers from various subfields and career stages within the neuroscience community. Our primary objective is to promote open science practices and facilitate the exchange of knowledge in the realm of neuroscience.</p>
-                    <p>We have thoughtfully curated this event to cultivate a dynamic and collaborative atmosphere. There will be educational tutorials, hands-on hacking projects, and social gatherings, all meticulously tailored to meet the specific requirements and interests of the {{city}} neuroscience community. We eagerly anticipate your active participation!</p>
-                    <p>During the open hacking time, every participant has the opportunity to propose a project as part of the {{title}}. These projects can either be endeavors attendees have previously worked on and seek contributions, opinions, or assistance with, or entirely new projects they aspire to undertake within the hackathon group. This inclusive approach encourages innovation and collective problem-solving within the Brainhack community. 
+                    <h3 class="text-center">Why {{title}}?</h3>
+                    <p>{{title}} is Montreal's local hub for Brainhack Global {{year}}, a decentralized event series that brings together neuroscience researchers across disciplines and career stages. Join us for four days of tutorials, collaborative hands-on projects, and networking events designed for the {{city}} community.</p>
+                    <p>During open hacking, you can propose a new idea or bring an existing project that could benefit from feedback, contributions, or hands-on help. Everyone is welcome to collaborate, share knowledge, and put open science into practice.</p>
                     <!-- TODO uncomment when project submission is open -->
-                    <!-- Get involved and <a href="{{project_submit_link}}" target="_blank">submit your project</a> or check out <a href="{{project_link}}" target="_blank">all proposed projects</a>.</p> -->
-                    <br>
+                    <p>Get involved: <a href="#projects">learn how to submit a project</a> or <a href="#submitted-projects">browse submitted projects</a>.</p>
                     <!-- sold out <p><h3 class="text-center"><a href="{{registration_link}}" target="_blank">{{registration_text}}</a></h3></p> -->
                     <p><h3 class="text-center"><a>{{registration_text}}</a></h3></p>
-                    <p>{{title}} is a local hub of Brainhack Global {{year}}.
-                    The goal of the hackathon is to bring together researchers with disparate backgrounds to collaborate on open science projects in neuroscience.</p>
+                    <br>
 					<h4>Dates: {{dates}}</h4>
 					<h4>Costs: {{details.costs}}</h4>
 					<h4>Location: <a href="{{location_url}}">{{location_name}}</a></h4>
                     <!-- TODO uncomment when project submission is open -->
                     <!-- <h4>Note: Make sure to read the <a href="{{code_of_conduct_link}}">code of conduct</a> of BrainHack Global and fill out the <a href="{{survey_link}}" target="_blank">demographic survey</a>.</h4> -->
                     <br>
-					<p class="text-center">Please join the <a href="{{discord_link}}" target="_blank">Brainhack Montreal Discord</a> for updated information on the developing Hackathon content and to contribute your own ideas.</p>
+					<p class="text-center">Join the <a href="{{discord_link}}" target="_blank">Brainhack Montreal Discord</a> for event updates and to share your ideas.</p>
                 </div>
 			</div>
 		</div>
 	</section>
     <!-- Map -->
     <section id="map" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" scrollwheel="false" marginheight="0" marginwidth="0" src="{{google_maps_link}}" style="border:0" allowfullscreen></iframe>
-        <br />
-        <small>
-            <a href="{{google_maps_link}}"></a>
-        </small>
+        <iframe
+            src="{{google_maps_link}}"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Map showing {{location_name}}">
+        </iframe>
     </section>
 
     <!-- Schedule -->
@@ -128,38 +148,52 @@
         <div class="container">
 			<div class="row text-center top30">
 				<div class="col-md-2 col-md-offset-5 col-xs-8 col-xs-offset-2 text-dark">
-				    <h3>
-                        <a href="{{schedule_link}}" target="_blank">Schedule</a>
-                    </h3>
+				    <h3>Schedule</h3>
 			    </div>
 			</div>
-			<div class="row top30">
-        {% for sched in schedule %}
-				<div class="col-md-6 col-lg-4 col-sm-10 col-xs-10 col-md-offset-0 col-lg-offset-0 col-sm-offset-1 col-xs-offset-1">
-					<div class="row top5 text-center">
-				        <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2 text-dark">
-					        <h4>{{sched.date}}</h4>
-				        </div>
-				    </div>
-            {% for time in sched.times %}
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            {{time.time}}
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            {{time.event}}
-			            </div>
-				    </div>
-            {% endfor %}
-            <div class="row top5">&nbsp;
-  				    </div>
-  					<div class="row top5">&nbsp;
-  				    </div>
-  					<div class="row top5">&nbsp;
-  				    </div>
-  				</div>
-        {% endfor %}
-		    </div>
+			<div class="schedule-layout">
+                <div class="schedule-day-tabs" aria-label="Choose a schedule day">
+                    {% for sched in schedule %}
+                    <button class="schedule-day-tab{% if loop.first %} is-selected{% endif %}" type="button" id="schedule-tab-{{loop.index0}}" data-schedule-tab="{{loop.index0}}" aria-controls="schedule-panel-{{loop.index0}}">
+                        <span class="schedule-tab-day">Day {{loop.index}}</span>
+                        <span class="schedule-tab-date">{{sched.date.split(' (')[0]}}</span>
+                    </button>
+                    {% endfor %}
+                </div>
+
+                <div class="schedule-panels" id="schedule-panels">
+                {% for sched in schedule %}
+                <section class="schedule-day{% if sched.tracks is defined %} schedule-day-tutorials{% endif %}{% if loop.first %} is-selected{% endif %} text-dark" id="schedule-panel-{{loop.index0}}" data-schedule-panel>
+                    <h4 class="schedule-day-title">{{sched.date}}</h4>
+                    {% if sched.summary is defined %}
+                    <p class="schedule-day-summary">{{sched.summary}}</p>
+                    {% endif %}
+                    {% if sched.tracks is defined %}
+                    <div class="tutorial-tracks">
+                        {% for track in sched.tracks %}
+                        <section class="tutorial-track">
+                            <h5 class="tutorial-track-title">{{track.name}}</h5>
+                            {% for time in track.times %}
+                            <div class="schedule-entry">
+                                <span class="schedule-time">{{time.time}}</span>
+                                <span class="schedule-event">{{time.event}}</span>
+                            </div>
+                            {% endfor %}
+                        </section>
+                        {% endfor %}
+                    </div>
+                    {% elif sched.times is defined %}
+                        {% for time in sched.times %}
+                    <div class="schedule-entry">
+                        <span class="schedule-time">{{time.time}}</span>
+                        <span class="schedule-event">{{time.event}}</span>
+                    </div>
+                        {% endfor %}
+                    {% endif %}
+                </section>
+                    {% endfor %}
+                </div>
+			</div>
 		</div>
     </aside>
 
@@ -167,13 +201,80 @@
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
     <section id="projects" class="services bg-primary">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-xl-8 col-xl-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-                    <h3>Project Ideas</h3>
-                    <p>Open hacking projects are a great forum for getting support on a technical issue from your own research program or starting a new collaborative project.</p>
-                    <p>Check out our full <a href="{{project_link}}" target="_blank">project listing</a> or <a href="{{project_submit_link}}" target="_blank">suggest your own</a>.</p>
+            <header class="projects-heading text-center">
+                <h2>Projects</h2>
+                <p>Lead an idea of your own or find a team to join during open hacking.</p>
+            </header>
+
+            <div class="compute-spotlight">
+                <section class="project-cta" aria-labelledby="project-cta-title">
+                    <p class="project-cta-eyebrow"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> {{project_callout.eyebrow}}</p>
+                    <h3 id="project-cta-title">{{project_callout.title}}</h3>
+                    <p class="project-cta-copy">{{project_callout.body}}</p>
+                    <p class="project-cta-note"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> {{project_callout.note}}</p>
+                    <div class="project-cta-actions">
+                        <a href="{{project_submit_link}}" target="_blank" rel="noopener noreferrer" class="btn btn-lg project-submit-btn">Submit a project</a>
+                        <a href="#submitted-projects" class="project-browse-link">Browse submitted projects <span aria-hidden="true">&darr;</span></a>
+                    </div>
+                </section>
+
+                <section class="hardware-spotlight" aria-labelledby="gb10-title">
+                    <div class="compute-spotlight-heading">
+                        <p class="compute-spotlight-eyebrow"><i class="fa-solid fa-bolt" aria-hidden="true"></i> {{gb10_highlight.eyebrow}}</p>
+                        <h3 id="gb10-title">{{gb10_highlight.title}}</h3>
+                        <p class="compute-spotlight-intro">{{gb10_highlight.intro}}</p>
+                    </div>
+
+                    <div class="compute-spec-grid" aria-label="Dell Pro Max with GB10 specifications">
+                        {% for spec in gb10_highlight.specs %}
+                        <div class="compute-spec">
+                            <strong>{{spec.value}}</strong>
+                            <span>{{spec.label}}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="compute-spotlight-details">
+                        <p>{{gb10_highlight.project_prompt}}</p>
+                        <p class="compute-compatibility-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> {{gb10_highlight.compatibility_note}}</p>
+                        <div class="compute-spotlight-actions">
+                            <a href="{{gb10_highlight.details_url}}" target="_blank" rel="noopener noreferrer" class="compute-details-link">Explore the Dell Pro Max with GB10 <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <details id="submitted-projects" class="submitted-projects">
+                <summary>
+                    <span class="submitted-projects-title"><i class="fa-brands fa-github" aria-hidden="true"></i> Submitted projects</span>
+                    <span class="submitted-projects-count">{{projects|length}} {% if projects|length == 1 %}project{% else %}projects{% endif %}</span>
+                    <i class="fa-solid fa-chevron-down submitted-projects-chevron" aria-hidden="true"></i>
+                </summary>
+
+                <div class="submitted-projects-content">
+                    {% if projects %}
+                    <div class="submitted-projects-grid">
+                        {% for project in projects %}
+                        <article class="submitted-project-card">
+                            <h3>{{project.get('Title', 'Untitled project')|striptags|trim}}</h3>
+                            <p class="submitted-project-leaders"><i class="fa-solid fa-users" aria-hidden="true"></i> <strong>Leaders:</strong> {{project.get('Leaders', 'To be announced')|striptags|trim}}</p>
+                            <p class="submitted-project-description">{{project.get('Project Description', 'No description provided.')|striptags|trim|truncate(360, True, '…')}}</p>
+                            {% if project.get('issue_url') %}
+                            <a href="{{project.issue_url}}" target="_blank" rel="noopener noreferrer" class="submitted-project-link"><i class="fa-brands fa-github" aria-hidden="true"></i> View / join on GitHub</a>
+                            {% endif %}
+                        </article>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="submitted-projects-empty text-center">
+                        <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+                        <h3>Be the first to propose a project</h3>
+                        <p>No projects have been published yet. Start with a question, challenge, or idea you would like to explore with others.</p>
+                        <a href="{{project_submit_link}}" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-lg">Submit a project</a>
+                    </div>
+                    {% endif %}
                 </div>
-			</div>
+            </details>
 		</div>
 	</section>
 
@@ -181,41 +282,24 @@
         <div class="container-fluid">
             <div class="row no-gutter">
 				<div class="col-lg-12 text-center">
-				    <h3 class="text-color-blue"><strong>{{title}} sponsors:</strong></h3>
+				    <h3 class="text-color-blue"><strong>Our sponsors</strong></h3>
 			    </div>
 			</div>
-            <div class="row">
-                {% for tier in sponsor_tiers %}
-                    {% set sponsors_for_tier = [] %}
-                    {% for sponsor in sponsors %}
-                        {% if sponsor.level == tier %}
-                            {% set sponsors_for_tier = sponsors_for_tier.append(sponsor) %}
-                        {% endif %}
-                    {% endfor %}
-                    {% if sponsors_for_tier|length > 0 %}
-                        {% if sponsors_for_tier|length == 3 %}
-                            {% set col_width_lg_md = 4 %}
-                        {% elif sponsors_for_tier|length == 4 %}
-                            {% set col_width_lg_md = 3 %}
-                        {% else %}
-                            {% set col_width_lg_md = 6 %}
-                        {% endif %}
-                        <div class="row top30">
-                            <div class="col-lg-12 text-center">
-                                <h4 class="text-color-blue">{{tier|capitalize}}s</h4>
-                            </div>
-                        </div>
-                        <div class="row text-center top10">
-                        {% for sponsor in sponsors_for_tier %}
-                            <div class="sponsor-col col-lg-{{col_width_lg_md}} col-md-{{col_width_lg_md}} col-sm-12 col-xs-12 text-center">
-                                <a href="{{sponsor.url}}" target="_blank" style="display:inline-block; border-bottom: none;">
-                                    <img src="{{sponsor.logo}}" class="img-responsive" style="max-height: {{sponsor.height | default('150px')}};" alt="{{sponsor.name}}" id="{{sponsor.name.replace(" ", "_")}}">
-                                </a>
-                            </div>
-                        {% endfor %}
-                        </div>
-                    {% endif %}
-                {% endfor %}
+            {% if sponsors|length == 3 %}
+                {% set col_width_lg_md = 4 %}
+            {% elif sponsors|length == 4 %}
+                {% set col_width_lg_md = 3 %}
+            {% else %}
+                {% set col_width_lg_md = 6 %}
+            {% endif %}
+            <div class="sponsor-row row text-center top30">
+            {% for sponsor in sponsors %}
+                <div class="sponsor-col col-lg-{{col_width_lg_md}} col-md-{{col_width_lg_md}} col-sm-12 col-xs-12 text-center">
+                    <a href="{{sponsor.url}}" target="_blank" style="display:inline-block; border-bottom: none;">
+                        <img src="{{sponsor.logo}}" class="img-responsive" style="height: {{sponsor.height | default('150px')}}; width: auto; max-width: 100%; object-fit: contain;" alt="{{sponsor.name}}" id="{{sponsor.name.replace(" ", "_")}}">
+                    </a>
+                </div>
+            {% endfor %}
             </div>
 
 			<br><br>
@@ -253,6 +337,177 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        (function () {
+            var nav = document.querySelector('.site-nav');
+            var toggle = document.querySelector('.site-nav-toggle');
+            var menu = document.querySelector('.site-nav-links');
+            var links = Array.prototype.slice.call(menu.querySelectorAll('a'));
+            var sections = links.map(function (link) {
+                return document.querySelector(link.getAttribute('href'));
+            }).filter(Boolean);
+            var scheduleDayTabs = document.querySelector('.schedule-day-tabs');
+            var scheduleTabButtons = Array.prototype.slice.call(document.querySelectorAll('[data-schedule-tab]'));
+            var schedulePanels = Array.prototype.slice.call(document.querySelectorAll('[data-schedule-panel]'));
+            var mobileSchedule = window.matchMedia('(max-width: 767px)');
+            var selectedScheduleDay = 0;
+
+            function setMenuOpen(isOpen) {
+                menu.classList.toggle('is-open', isOpen);
+                toggle.classList.toggle('is-open', isOpen);
+                toggle.setAttribute('aria-expanded', String(isOpen));
+                toggle.querySelector('.sr-only').textContent = isOpen ? 'Close navigation menu' : 'Open navigation menu';
+            }
+
+            function updateActiveLink() {
+                var activeId = null;
+                var offset = nav.offsetHeight + 32;
+
+                sections.forEach(function (section) {
+                    if (section.getBoundingClientRect().top <= offset) {
+                        activeId = section.id;
+                    }
+                });
+
+                links.forEach(function (link) {
+                    var isActive = link.getAttribute('href') === '#' + activeId;
+                    link.classList.toggle('is-active', isActive);
+                    if (isActive) {
+                        link.setAttribute('aria-current', 'location');
+                    } else {
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            }
+
+            function updateScheduleView() {
+                var isMobile = mobileSchedule.matches;
+
+                if (isMobile) {
+                    scheduleDayTabs.setAttribute('role', 'tablist');
+                } else {
+                    scheduleDayTabs.removeAttribute('role');
+                }
+
+                scheduleTabButtons.forEach(function (button, index) {
+                    var isSelected = index === selectedScheduleDay;
+
+                    button.classList.toggle('is-selected', isSelected);
+                    if (isMobile) {
+                        button.setAttribute('role', 'tab');
+                        button.setAttribute('aria-selected', String(isSelected));
+                        button.setAttribute('tabindex', isSelected ? '0' : '-1');
+                    } else {
+                        button.removeAttribute('role');
+                        button.removeAttribute('aria-selected');
+                        button.removeAttribute('tabindex');
+                    }
+                });
+
+                schedulePanels.forEach(function (panel, index) {
+                    var isSelected = index === selectedScheduleDay;
+
+                    panel.classList.toggle('is-selected', isSelected);
+                    panel.hidden = isMobile && !isSelected;
+                    if (isMobile) {
+                        panel.setAttribute('role', 'tabpanel');
+                        panel.setAttribute('aria-labelledby', scheduleTabButtons[index].id);
+                    } else {
+                        panel.removeAttribute('role');
+                        panel.removeAttribute('aria-labelledby');
+                    }
+                });
+            }
+
+            function selectScheduleDay(index, moveFocus) {
+                selectedScheduleDay = index;
+                updateScheduleView();
+                if (moveFocus) {
+                    scheduleTabButtons[index].focus();
+                }
+            }
+
+            toggle.addEventListener('click', function () {
+                setMenuOpen(toggle.getAttribute('aria-expanded') !== 'true');
+            });
+
+            links.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    setMenuOpen(false);
+                });
+            });
+
+            scheduleTabButtons.forEach(function (button, index) {
+                button.addEventListener('click', function () {
+                    selectScheduleDay(index, false);
+                });
+
+                button.addEventListener('keydown', function (event) {
+                    var nextIndex = null;
+
+                    if (event.key === 'ArrowLeft') {
+                        nextIndex = (index - 1 + scheduleTabButtons.length) % scheduleTabButtons.length;
+                    } else if (event.key === 'ArrowRight') {
+                        nextIndex = (index + 1) % scheduleTabButtons.length;
+                    } else if (event.key === 'Home') {
+                        nextIndex = 0;
+                    } else if (event.key === 'End') {
+                        nextIndex = scheduleTabButtons.length - 1;
+                    }
+
+                    if (mobileSchedule.matches && nextIndex !== null) {
+                        event.preventDefault();
+                        selectScheduleDay(nextIndex, true);
+                    }
+                });
+            });
+
+            if (mobileSchedule.addEventListener) {
+                mobileSchedule.addEventListener('change', updateScheduleView);
+            } else {
+                mobileSchedule.addListener(updateScheduleView);
+            }
+
+            var projectBrowseLinks = document.querySelectorAll('a[href="#submitted-projects"]');
+            var submittedProjects = document.querySelector('#submitted-projects');
+            if (projectBrowseLinks.length && submittedProjects) {
+                for (var projectLinkIndex = 0; projectLinkIndex < projectBrowseLinks.length; projectLinkIndex += 1) {
+                    projectBrowseLinks[projectLinkIndex].addEventListener('click', function () {
+                        submittedProjects.open = true;
+                    });
+                }
+            }
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+                    setMenuOpen(false);
+                    toggle.focus();
+                }
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 768) {
+                    setMenuOpen(false);
+                }
+                updateActiveLink();
+            });
+
+            var ticking = false;
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    window.requestAnimationFrame(function () {
+                        updateActiveLink();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            updateScheduleView();
+            updateActiveLink();
+        }());
+    </script>
 
 </body>
 

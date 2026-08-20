@@ -2,9 +2,9 @@
   "title": "Brainhack Montreal Fall 2026",
   "location": "Montreal, QC, Canada",
   "city": "Montreal",
-  "dates": "October 2026",
+  "dates": "October 2 (Tutorial) & 5–7 (hacking) 2026",
   "year": "2026",
-  "background_img": "https://raw.githubusercontent.com/BrainhackMTL/fall2026/refs/heads/main/assets/banner.jpg",
+  "background_img": "assets/banner-light.png",
   "color_theme": {
     "primary": "rgb(0, 103, 165)",
     "primary_hover": "rgb(123, 175, 222)",
@@ -12,13 +12,45 @@
   },
   "code_of_conduct_link": "https://brainhack.org/code-of-conduct.html",
   "registration_link": "",
-  "registration_text": "Open soon!",
+  "registration_text": "Registration opening soon!",
   "survey_link": "",
   "discord_link": "https://discord.gg/wysCYqTWyM",
+  "github_repo": "BrainhackMTL/fall2026",
   "project_link": "projects.html",
-  "project_submit_link": "",
+  "project_submit_link": "https://github.com/BrainhackMTL/fall2026/issues/new?template=project-submission-template.yml",
   "project_submit_icon": "fa-child",
-  "title_photo_link": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Montreal_-_QC_-_Skyline.jpg",
+  "project_callout": {
+    "eyebrow": "Call for projects",
+    "title": "Bring your research challenge. Build it with the community.",
+    "body": "Turn a technical roadblock, early-stage idea, or ongoing open-science project into a collaborative Brainhack project. Projects of every size are welcome, and first-time project leaders are encouraged to apply.",
+    "note": "Your project can take advantage of the GB10 systems below, but it does not need to be an AI or GPU project."
+  },
+  "gb10_highlight": {
+    "eyebrow": "Hackathon hardware",
+    "title": "20 Dell Pro Max with GB10 systems available",
+    "intro": "Thanks to the generous support of Dell Technologies and NVIDIA, attendees will have access to 20 compact AI workstations during the hackathon.",
+    "specs": [
+      {
+        "value": "NVIDIA GB10",
+        "label": "Grace Blackwell Superchip"
+      },
+      {
+        "value": "128 GB",
+        "label": "coherent unified memory"
+      },
+      {
+        "value": "Up to 1 PFLOP",
+        "label": "FP4 AI performance"
+      },
+      {
+        "value": "DGX OS",
+        "label": "NVIDIA AI software stack"
+      }
+    ],
+    "project_prompt": "Bring or propose projects involving local model inference, fine-tuning, generative AI, computer vision, or GPU-accelerated data science. Access instructions will be shared with registered attendees closer to the event.",
+    "compatibility_note": "Project leads: the GB10 uses a 20-core Arm CPU and Linux-based NVIDIA DGX OS. Please check that required containers and dependencies support Linux/Arm64.",
+    "details_url": "https://www.dell.com/en-us/shop/desktop-computers/dell-pro-max-with-gb10/spd/dell-pro-max-fcm1253-micro"
+  },
   "services": [
     {
       "name": "Get Involved",
@@ -50,13 +82,36 @@
     }
   ],
   "details": {
-    "costs": "TBD"
+    "costs": "TBA"
   },
-  "schedule_background_img": "https://upload.wikimedia.org/wikipedia/commons/0/04/Pont_Jacques_Cartier_Montreal.JPG",
-  "schedule_link": "",
+  "schedule_background_img": "assets/banner-dark.png",
   "schedule": [
     {
-      "date": "Day 1",
+      "date": "Oct. 2 (Day 1)",
+      "summary": "Two parallel tutorial tracks (4–6 slots TBA)",
+      "tracks": [
+        {
+          "name": "Track 1",
+          "times": [
+            {
+              "time": "TBA",
+              "event": "Tutorial lineup TBA"
+            }
+          ]
+        },
+        {
+          "name": "Track 2",
+          "times": [
+            {
+              "time": "TBA",
+              "event": "Tutorial lineup TBA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "Oct. 5 (Day 2)",
       "times": [
         {
           "time": "9:00-9:30",
@@ -64,7 +119,7 @@
         },
         {
           "time": "9:30-10:00",
-          "event": "Introduction to Brainhack"
+          "event": "Intro to Brainhack"
         },
         {
           "time": "10:00-11:00",
@@ -79,54 +134,46 @@
           "event": "Lunch"
         },
         {
-          "time": "13:00-16:00",
-          "event": "Open hacking"
-        },
-        {
-          "time": "16:00-17:00",
+          "time": "13:00-14:00",
           "event": "Unconference"
         },
         {
-          "time": "17:00-19:00",
-          "event": "Social Gathering"
+          "time": "14:00-17:00",
+          "event": "Open hacking"
         }
       ]
     },
     {
-      "date": "Day 2",
+      "date": "Oct. 6 (Day 3)",
       "times": [
         {
           "time": "9:00-12:00",
-          "event": "Open hacking / TrainTrack"
+          "event": "Open hacking"
         },
         {
           "time": "12:00-13:00",
           "event": "Lunch"
         },
         {
-          "time": "13:00-16:00",
-          "event": "Open hacking / TrainTrack"
+          "time": "13:00-14:00",
+          "event": "Unconference"
         },
         {
-          "time": "16:00-17:00",
-          "event": "Unconference"
+          "time": "14:00-17:00",
+          "event": "Open hacking"
         }
       ]
     },
     {
-      "date": "Day 3",
+      "date": "Oct. 7 (Day 4)",
       "times": [
         {
-          "time": "9:00-10:00",
+          "time": "9:00-11:00",
           "event": "Open hacking"
-        },
-        {
-          "time": "10:00-11:00",
-          "event": "Unconference"
         },
         {
           "time": "11:00-12:00",
-          "event": "Open hacking"
+          "event": "Unconference"
         },
         {
           "time": "12:00-13:00",
@@ -144,27 +191,34 @@
     }
   ],
   "location_logo": "fa-solid fa-location-dot",
-  "location_name": "TBD",
+  "location_name": "Thomson House (Ballroom - 3rd Floor)",
   "location_url": "",
-  "google_maps_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d178788.19772641425!2d-73.87702217565085!3d45.55906371663775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a541c64b70d%3A0x654e3138211fefef!2sMontreal%2C%20QC!5e0!3m2!1sen!2sca!4v1771948535963!5m2!1sen!2sca",
-  "sponsor_tiers": [
-    "champion",
-    "advocate",
-    "supporter",
-    "enthusiast"
-  ],
+  "google_maps_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5707.914758273053!2d-73.58328056248493!3d45.50394356137919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a389350e9d1%3A0x6b0e79ae42e0786d!2sThomson%20House%2C%203650%20Rue%20McTavish%2C%20Montreal%2C%20QC%20H3A%201X9!5e0!3m2!1sen!2sca!4v1787243981585!5m2!1sen!2sca",
   "sponsors": [
     {
       "name": "CIHR",
       "url": "https://cihr-irsc.gc.ca/e/193.html",
-      "logo": "https://raw.githubusercontent.com/BrainhackMTL/fall2026/refs/heads/main/assets/logos/cihr.jpg",
-      "level": "champion",
+      "logo": "assets/sponsors/cihr.jpg",
+      "height": "200px"
+    },
+    {
+      "name": "Dell",
+      "url": "https://www.dell.com/",
+      "logo": "assets/sponsors/dell.svg",
+      "height": "200px"
+    },
+    {
+      "name": "Nvidia",
+      "url": "https://www.nvidia.com/",
+      "logo": "assets/sponsors/nvidia.png",
       "height": "200px"
     }
   ],
   "organizers": [
     "Mathieu Dugré",
-    "Michelle Wang"
+    "Michelle Wang",
+    "Clara El Khantour",
+    "Julia Katharina Pfarr"
   ],
   "contact_email": "brainhackmontreal@gmail.com"
 }

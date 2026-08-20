@@ -1,14 +1,10 @@
 name: Project submission template
 
-# See the json schema to help you create / update this form
-# https://json.schemastore.org/github-issue-forms.json
+# Schema: https://json.schemastore.org/github-issue-forms.json
 
-description: Fill in this template to submit a project
+description: Submit a project for Brainhack Montreal Fall 2026
 
-labels: [project]
-
-# assignees:
-#   - octocat
+labels: [project, project-submission]
 
 body:
   - type: markdown
@@ -16,78 +12,57 @@ body:
       value: |
         ## Guidelines
 
-        We are very excited to meet you at Brainhack Montreal 2026 🎉.
+        Welcome to Brainhack Montreal Fall 2026! 🎉
 
-        To submit a project:
+        - Read the **[project guidelines](https://github.com/brainhackorg/bhg-event-materials/blob/master/docs/leading_and_attending_to_brainhack_projects.md)** to help make your project inclusive and welcoming.
+        - Complete the required fields. If details are not yet available, enter `TBD`.
+        - Select **Submit new issue**. You can edit your submission later.
 
-        - make sure you have read our **[Guidelines for Leading and Attending to Brainhack Projects](https://github.com/brainhackorg/bhg-event-materials/blob/master/docs/leading_and_attending_to_brainhack_projects.md)** to increase the diversity and inclusivity of your project work
+        A project monitor will review your submission. Approved projects receive the `status:web_ready` label.
 
-        - fill in all the required items (marked with a red asterisk `*`) in the form below. Note that if you are missing some information but still want to submit a project, you can always input dummy content.
+        Need help? Message us on [Discord](https://discord.gg/AEXF3kQ9Wf).
 
-        - click on `Submit new issue` at the bottom of the form
-
-        After the issue is submitted, we will assign a `project monitor` to review your submission.
-
-        After approval we will add the label `status:web_ready`.
-
-        Note that you can always update your issue after clicking on `Submit new issue`. 
-        If at any time you need help from us or anything is unclear, please message us on Discord (`https://discord.gg/AEXF3kQ9Wf`). Our team is here to help!
-
-  # ----------------------------------------------------------------------------
-  # PROJECT INFO
-  # ----------------------------------------------------------------------------
-
+  # Project info
   - type: markdown
     attributes:
       value: |
         ## Project info
 
-  # ----------------------------------------------------------------------------
-  # required
-  # ----------------------------------------------------------------------------
-
   - type: textarea
     attributes:
       label: Title
-      description: Add a title to describe your project.
     validations:
       required: true
 
   - type: textarea
     attributes:
       label: Leaders
-      description: Add the full name (and email + Discord handle if possible)
-        of the project leaders.
+      description: List each leader's full name and, if possible, email and Discord handle.
     validations:
       required: true
 
   - type: textarea
     attributes:
       label: Collaborators
-      description: Add the full names (and email + Discord handles if possible)
-        of any person contributing to the project.
-      placeholder: Please add current collaborators within your proposed project
+      description: List current collaborators' full names and, if possible, email and Discord handles.
     validations:
       required: false
 
   - type: textarea
     attributes:
       label: Project Description
-      description: "Add a brief description of the project.\nTry to include all the
-        relevant information to answer the following questions."
+      description: Briefly describe the project.
       placeholder: |
-        - What are you doing, for whom, and why?
-        - What makes your project special and exciting?
-        - How to get started?
-        - Where to find key resources?
+        - What will the project do, who is it for, and why does it matter?
+        - How can contributors get started?
+        - Where can they find key resources?
     validations:
       required: true
 
   - type: textarea
     attributes:
       label: Link to project repository/sources
-      description: If your project already exists, please provide a link to project
-        repository/sources (e.g., Github link)
+      description: Link to an existing repository or other project source, if applicable.
       placeholder: https://github.com/user_name/my_awesome_project
     validations:
       required: false
@@ -95,106 +70,75 @@ body:
   - type: textarea
     attributes:
       label: Goals for Brainhack Montreal
-      description: "Add a list of milestones or deliverables that you expect to achieve
-        during the event.\nTry to provide goals of varying complexity for contributors
-        with different sets of skills\nIf possible make a couple of good first issues
-        in your project repository to help new contributors find easy gateways."
+      description: List event milestones or deliverables at varied difficulty levels. If possible, link a few beginner-friendly issues.
     validations:
       required: true
 
   - type: textarea
     attributes:
       label: Skills
-      description: "Add a list of skills needed to contribute to this project.\nTry
-        to think of both coding and non-coding skills.\nYou can provide predefined
-        skill levels, but it’s better if you give concrete examples of the type of
-        task contributors will be facing.\nPlease make sure you create equal opportunities
-        to accommodate the newcomers in your project to learn from each other and
-        share the experiences."
+      description: List coding and non-coding contribution tasks, the skills they require, and beginner-friendly options.
       placeholder: |
-        - Python: advanced
-        - FSL: basics
+        - Python: write unit tests (beginner)
+        - FSL: document a preprocessing workflow (intermediate)
     validations:
       required: true
 
   - type: textarea
     attributes:
-      label: Tech stack
-      description: "Describe tools/packages/libraries that will be used (e.g. PyTorch, 
-      Nipype, Docker, Next.js, R, etc.)."
-      placeholder: |
-        - Python: basic
-        - FSL: basics
-    validations:
-      required: false
-
-  - type: textarea
-    attributes:
       label: Onboarding documentation / Expectations
-      description: "Provide links to onboarding documents if you have some (for example
-        a `CONTRIBUTING.md`). You can also describe the commitment expected from team 
-        members during the event"
+      description: Link to onboarding documentation, such as `CONTRIBUTING.md`, and describe the expected event commitment.
     validations:
       required: false
 
   - type: textarea
     attributes:
       label: What will participants learn?
-      description: "In order to make your project appeal to participants of all levels,
-        it is very important that you provide a list of skills that participants would
-        acquire by working on your project.\nFolks that take part in Brainhacks for
-        the first time usually find projects a little intimidating, make sure you
-        make it appealing for them too!"
+      description: List the skills or knowledge contributors can gain, including outcomes suitable for first-time participants.
     validations:
       required: false
 
   - type: textarea
     attributes:
       label: Data to use
-      description: If your project uses data, add a short description of the data
-        and a link to its source.
+      description: If applicable, briefly describe the data and link to its source.
     validations:
       required: false
-
 
   - type: textarea
     attributes:
       label: Credit to collaborators
-      description: Describe how you will credit new members to your project.
-      placeholder: Project contributors are listed on the project README using [all-contributors
-        github bot](https://github.com/all-contributors/all-contributors).
+      description: How will new contributors be credited?
+      placeholder: Project contributors are listed in the README using the [all-contributors bot](https://github.com/all-contributors/all-contributors).
     validations:
       required: false
 
   - type: textarea
     attributes:
       label: Image
-      description: Provide an image of your project for the Brainhack Global website.
+      description: Upload a project image for the Brainhack Global website.
     validations:
       required: false
 
-  # ----------------------------------------------------------------------------
-  # LABELS
-  # ----------------------------------------------------------------------------
-
+  # Labels
   - type: markdown
     attributes:
       value: |
         ## Project labels
 
-        These labels can help match your project with the attendees' interests.
+        Select labels to help attendees find projects that match their interests.
 
   - type: dropdown
     attributes:
       label: Type
       multiple: true
       options:
-        - coding_methods
-        - data_management
+        - coding methods
+        - data management
         - documentation
-        - method_development
-        - pipeline_development
-        - tutorial_recording
+        - methods development
+        - pipeline development
+        - tutorial
         - visualization
         - other
     validations:
@@ -205,9 +149,10 @@ body:
       label: Project Maturity Status
       multiple: false
       options:
-        - 0 - concept but no content
-        - 1 - basic structure
-        - 2 - releases existing
+        - 0 - project idea
+        - 1 - prototype
+        - 2 - active development
+        - 3 - mature project
     validations:
       required: true
 
@@ -324,35 +269,25 @@ body:
       label: Git skills
       multiple: true
       options:
-        - 0_no_git_skills
-        - 1_commit_push
-        - 2_branches_PRs
-        - 3_continuous_integration
-        - 4_not_applicable
+        - 0 - no git skills
+        - 1 - commit and push
+        - 2 - branches and pull requests
+        - 3 - continuous integration
+        - not applicable
     validations:
       required: true
 
   - type: textarea
     attributes:
       label: Anything else?
-      description: Ticked the `other` option on one of the menu above and want to
-        add details? Any extra label we did not cover? Some softwares you are using
-        we forgot to mention? Please use the space if there is anything else that
-        you would like to add about your project.
+      description: If you selected `other`, add details here. You may also include information not covered above.
     validations:
       required: false
 
-  # ----------------------------------------------------------------------------
-  # SUBMISSION CHECKLIST
-  # ----------------------------------------------------------------------------
-
+  # After submission
   - type: markdown
     attributes:
       value: |
-        ## Submission checklist
+        ## After submitting
 
-  - type: checkboxes
-    attributes:
-      label: Things to do after the project is submitted and ready to review.
-      options:
-        - label: Short summary of your project pitch to present during the hackathon.
+        Prepare a short project pitch to present during the hackathon.
