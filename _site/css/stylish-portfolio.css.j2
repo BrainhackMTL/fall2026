@@ -49,7 +49,7 @@ body {
     z-index: 1000;
     min-height: 72px;
     color: #fff;
-    background: rgba(0, 103, 165, .88);
+    background: rgba(0, 60, 96, 0.88);
     border-bottom: 1px solid rgba(255, 255, 255, .14);
     box-shadow: 0 8px 24px rgba(0, 63, 101, .2);
     -webkit-backdrop-filter: blur(12px);
@@ -276,12 +276,13 @@ hr.small {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 160px;
-    height: 70px;
+    width: 110px;
+    height: 110px;
     padding: 9px 14px;
-    background: rgba(255, 255, 255, .94);
+    overflow: hidden;
+    background: #fff;
     border: 2px solid transparent;
-    border-radius: 7px;
+    border-radius: 2px;
     box-shadow: 0 8px 22px rgba(0, 0, 0, .2);
     transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
 }
@@ -301,10 +302,8 @@ hr.small {
 
 .hero-sponsor-logo {
     display: block;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 52px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -418,17 +417,13 @@ hr.small {
     }
 
     .hero-sponsor-list {
-        gap: 8px;
+        gap: 6px;
     }
 
     .hero-sponsor-link {
-        width: 112px;
-        height: 60px;
-        padding: 8px 10px;
-    }
-
-    .hero-sponsor-logo {
-        max-height: 44px;
+        width: 94px;
+        height: 94px;
+        padding: 6px 8px;
     }
 
     .hero-actions {
