@@ -58,7 +58,6 @@ def load_projects(directory, github_repo):
 
 files_to_generate = [
     {"filename": "index.html.j2", "location": "./_site"},
-    {"filename": "projects.html.j2", "location": "./_site"},  # New projects page
     {"filename": "css/stylish-portfolio.css.j2", "location": "./_site"},
 ]
 
