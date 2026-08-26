@@ -11,8 +11,8 @@
     "font": "#fff"
   },
   "code_of_conduct_link": "https://brainhack.org/code-of-conduct.html",
-  "registration_link": "",
-  "registration_text": "Registration opening soon!",
+  "registration_link": "https://www.eventbrite.ca/e/brainhack-montreal-winter-2026-tickets-1998559157239",
+  "registration_text": "Register now !",
   "survey_link": "",
   "discord_link": "https://discord.gg/wysCYqTWyM",
   "github_repo": "BrainhackMTL/fall2026",
@@ -61,7 +61,7 @@
     }
   ],
   "details": {
-    "costs": "TBA"
+    "costs": "Free!"
   },
   "schedule_background_img": "assets/banner-dark.png",
   "schedule": [

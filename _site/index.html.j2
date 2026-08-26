@@ -78,7 +78,7 @@
 
         {% if sponsors %}
         <section class="hero-sponsors" aria-labelledby="hero-sponsors-title">
-            <h2 id="hero-sponsors-title" class="hero-sponsors-title">Sponsored by</h2>
+            <h2 id="hero-sponsors-title" class="hero-sponsors-title">Supported by</h2>
             <div class="hero-sponsor-list">
                 {% for sponsor in sponsors %}
                 <a class="hero-sponsor-link" href="{{sponsor.url}}" target="_blank" rel="noopener noreferrer">
@@ -90,7 +90,7 @@
         {% endif %}
 
         <div class="hero-actions">
-            <!-- Sold out: <a href="{{registration_link}}" class="btn btn-dark btn-lg">{{registration_text}}</a> -->
+            <a href="{{registration_link}}" class="btn btn-dark btn-lg">{{registration_text}}</a>
             <a href="{{discord_link}}" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-lg">Join Brainhack Montreal Discord</a>
             <a href="#projects" rel="noopener noreferrer" class="btn btn-dark btn-lg">How to submit a Project?</a>
             <a href="#submitted-projects" class="btn btn-dark btn-lg">Submitted projects</a>
@@ -128,8 +128,7 @@
                     <p>During open hacking, you can propose a new idea or bring an existing project that could benefit from feedback, contributions, or hands-on help. Everyone is welcome to collaborate, share knowledge, and put open science into practice.</p>
                     <!-- TODO uncomment when project submission is open -->
                     <p>Get involved: <a href="#projects">learn how to submit a project</a> or <a href="#submitted-projects">browse submitted projects</a>.</p>
-                    <!-- sold out <p><h3 class="text-center"><a href="{{registration_link}}" target="_blank">{{registration_text}}</a></h3></p> -->
-                    <p><h3 class="text-center"><a>{{registration_text}}</a></h3></p>
+                    <p><h3 class="text-center"><a href="{{registration_link}}" target="_blank">{{registration_text}}</a></h3></p>
                     <br>
 					<h4>Dates: {{dates}}</h4>
 					<h4>Costs: {{details.costs}}</h4>
@@ -280,7 +279,7 @@
         <div class="container-fluid">
             <div class="row no-gutter">
 				<div class="col-lg-12 text-center">
-				    <h3 class="text-color-blue"><strong>Our sponsors</strong></h3>
+				    <h3 class="text-color-blue"><strong>Supported by</strong></h3>
 			    </div>
 			</div>
             {% if sponsors|length == 3 %}
