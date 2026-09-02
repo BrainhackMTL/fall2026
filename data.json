@@ -176,7 +176,7 @@
   "sponsors": [
     {
       "name": "Dell",
-      "url": "https://www.dell.com/",
+      "url": "http://www.delltechnologies.com/",
       "logo": "assets/sponsors/dell.svg",
       "height": "200px"
     },
@@ -194,8 +194,8 @@
     }
   ],
   "organizers": [
+    "Michelle Wang",  
     "Mathieu Dugré",
-    "Michelle Wang",
     "Clara El Khantour",
     "Julia Katharina Pfarr"
   ],

@@ -266,8 +266,8 @@ hr.small {
 }
 
 .hero-sponsor-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 110px);
     gap: 10px;
     justify-content: center;
 }
@@ -285,6 +285,11 @@ hr.small {
     border-radius: 2px;
     box-shadow: 0 8px 22px rgba(0, 0, 0, .2);
     transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.hero-sponsor-link-dell {
+    grid-column: span 2;
+    width: auto;
 }
 
 .hero-sponsor-link:hover,
@@ -417,6 +422,7 @@ hr.small {
     }
 
     .hero-sponsor-list {
+        grid-template-columns: repeat(2, 94px);
         gap: 6px;
     }
 
@@ -424,6 +430,11 @@ hr.small {
         width: 94px;
         height: 94px;
         padding: 6px 8px;
+    }
+
+    .hero-sponsor-link-dell {
+        width: 188px;
+        justify-self: center;
     }
 
     .hero-actions {

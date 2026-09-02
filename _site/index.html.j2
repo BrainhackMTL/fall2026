@@ -81,7 +81,7 @@
             <h2 id="hero-sponsors-title" class="hero-sponsors-title">Supported by</h2>
             <div class="hero-sponsor-list">
                 {% for sponsor in sponsors %}
-                <a class="hero-sponsor-link" href="{{sponsor.url}}" target="_blank" rel="noopener noreferrer">
+                <a class="hero-sponsor-link hero-sponsor-link-{{sponsor.name | lower | replace(' ', '-')}}" href="{{sponsor.url}}" target="_blank" rel="noopener noreferrer">
                     <img class="hero-sponsor-logo" src="{{sponsor.logo}}" alt="{{sponsor.name}}">
                 </a>
                 {% endfor %}
