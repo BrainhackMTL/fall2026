@@ -67,23 +67,71 @@
   "schedule": [
     {
       "date": "Oct. 2 (Day 1)",
-      "summary": "Two parallel tutorial tracks (4–6 slots TBA)",
+      "summary": "",
       "tracks": [
         {
           "name": "Track 1",
           "times": [
             {
-              "time": "TBA",
-              "event": "Tutorial lineup TBA"
+              "time": "9:00-9:30",
+              "event": "Registration"
+            },
+            {
+              "time": "9:30-10:00",
+              "event": "Welcome message"
+            },
+            {
+              "time": "10:00-12:00",
+              "event": "Tutorial 1: Introduction to Git and GitHub"
+            },
+            {
+              "time": "12:00-13:00",
+              "event": "Lunch"
+            },
+            {
+              "time": "13:00-15:00",
+              "event": "Tutorial 2: Methods in Neuro-AI by <span class='speaker'>Dr. Hamza Abdelhedi</span>"
+            },
+            {
+              "time": "15:00-15:30",
+              "event": "Break"
+            },
+            {
+              "time": "15:30-17:30",
+              "event": "Tutorial 3: Normative modelling by <span class='speaker'>Dr. Johanna Bayer</span>"
             }
           ]
         },
         {
-          "name": "Track 2",
+          "name": "Track 2 (Full day)",
           "times": [
             {
-              "time": "TBA",
-              "event": "Tutorial lineup TBA"
+              "time": "9:00-9:30",
+              "event": "Registration"
+            },
+            {
+              "time": "9:30-10:00",
+              "event": "Welcome message"
+            },
+            {
+              "time": "10:00-12:00",
+              "event": "Managing Research Software Projects by <span class='speaker'>Dr. Greg Wilson</span>"
+            },
+            {
+              "time": "12:00-13:00",
+              "event": "Lunch"
+            },
+            {
+              "time": "13:00-15:00",
+              "event": "Managing Research Software Projects by <span class='speaker'>Dr. Greg Wilson</span>"
+            },
+            {
+              "time": "15:00-15:30",
+              "event": "Break"
+            },
+            {
+              "time": "15:30-17:30",
+              "event": "Managing Research Software Projects by <span class='speaker'>Dr. Greg Wilson</span>"
             }
           ]
         }
