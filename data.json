@@ -60,6 +60,44 @@
       "desc": "with the community throughout the hackathon and an evening social event!"
     }
   ],
+  "tutorials": [
+    {
+      "title": "Managing Research Software Projects",
+      "time": "10:00–17:30 · Track 1 (full day)",
+      "description": "This workshop introduces the ideas and tools you need to manage a team of up to a dozen people working together to build research software. Each session ends with something you can take home and use the following week.",
+      "speaker": "Dr. Greg Wilson",
+      "bio": "Dr. Greg Wilson is a programmer, author, and educator based in Toronto. He co-founded and was the first Executive Director of Software Carpentry, and has authored or edited over a dozen books. Greg is a member of the Python Software Foundation and a recipient of ACM SIGSOFT's Influential Educator of the Year award.",
+      "photo": "assets/speakers/greg-wilson.jpg",
+      "photo_alt": "Portrait of Dr. Greg Wilson"
+    },
+    {
+      "title": "Introduction to Git and GitHub",
+      "time": "10:00–12:00 · Track 2",
+      "description": "This workshop teaches the basics of version control using the local software Git and the collaborative online platform GitHub. It is meant for beginners and will provide you with the necessary theoretical knowledge and practical skills to get started with these two important software tools. ",
+      "speaker": "Dr. Julia-Katharina Pfarr",
+      "bio": "Julia is a PostDoc at McGill working on methods for clinical questionnaire harmonization. She has given the introductory workshop to Git and GitHub at least a dozen times.",
+      "photo": "assets/speakers/julia-katharina-pfarr.jpeg",
+      "photo_alt": "Portrait of Dr. Julia-Katharina Pfarr"
+    },
+    {
+      "title": "Methods in Neuro-AI",
+      "time": "13:00–15:00 · Track 2",
+      "description": "Tutorial description coming soon.",
+      "speaker": "Hamza Abdelhedi",
+      "bio": "Speaker bio coming soon.",
+      "photo": "assets/speakers/hamza-abdelhedi.jpeg",
+      "photo_alt": "Portrait of Hamza Abdelhedi"
+    },
+    {
+      "title": "Normative modelling",
+      "time": "15:30–17:30 · Track 2",
+      "description": "Tutorial description coming soon.",
+      "speaker": "Dr. Johanna Bayer",
+      "bio": "Speaker bio coming soon.",
+      "photo": "assets/speakers/johanna-bayer.jpeg",
+      "photo_alt": "Portrait of Dr. Johanna Bayer"
+    }
+  ],
   "details": {
     "costs": "Free!"
   },
@@ -70,70 +108,55 @@
       "summary": "",
       "tracks": [
         {
-          "name": "Track 1",
-          "times": [
-            {
-              "time": "9:00-9:30",
-              "event": "Registration"
-            },
-            {
-              "time": "9:30-10:00",
-              "event": "Welcome message"
-            },
-            {
-              "time": "10:00-12:00",
-              "event": "Tutorial 1: Introduction to Git and GitHub"
-            },
-            {
-              "time": "12:00-13:00",
-              "event": "Lunch"
-            },
-            {
-              "time": "13:00-15:00",
-              "event": "Tutorial 2: Methods in Neuro-AI by <span class='speaker'>Dr. Hamza Abdelhedi</span>"
-            },
-            {
-              "time": "15:00-15:30",
-              "event": "Break"
-            },
-            {
-              "time": "15:30-17:30",
-              "event": "Tutorial 3: Normative modelling by <span class='speaker'>Dr. Johanna Bayer</span>"
-            }
-          ]
+          "id": "track-1",
+          "name": "Track 1 (Full day)"
         },
         {
-          "name": "Track 2 (Full day)",
-          "times": [
-            {
-              "time": "9:00-9:30",
-              "event": "Registration"
-            },
-            {
-              "time": "9:30-10:00",
-              "event": "Welcome message"
-            },
-            {
-              "time": "10:00-12:00",
-              "event": "Managing Research Software Projects by <span class='speaker'>Dr. Greg Wilson</span>"
-            },
-            {
-              "time": "12:00-13:00",
-              "event": "Lunch"
-            },
-            {
-              "time": "13:00-15:00",
-              "event": "Managing Research Software Projects by <span class='speaker'>Dr. Greg Wilson</span>"
-            },
-            {
-              "time": "15:00-15:30",
-              "event": "Break"
-            },
-            {
-              "time": "15:30-17:30",
-              "event": "Managing Research Software Projects by <span class='speaker'>Dr. Greg Wilson</span>"
-            }
-          ]
+          "id": "track-2",
+          "name": "Track 2"
+        }
+      ],
+      "rows": [
+        {
+          "time": "9:00-9:30",
+          "event": "Registration"
+        },
+        {
+          "time": "9:30-10:00",
+          "event": "Welcome message"
+        },
+        {
+          "time": "10:00-12:00",
+          "events": {
+            "track-1": "Managing Research Software Projects by <span class='speaker'>Dr. Greg Wilson</span>",
+            "track-2": "Introduction to Git and GitHub by <span class='speaker'>Dr. Julia-Katharina Pfarr</span>"
+          }
+        },
+        {
+          "time": "12:00-13:00",
+          "event": "Lunch"
+        },
+        {
+          "time": "13:00-15:00",
+          "events": {
+            "track-1": "Managing Research Software Projects by <span class='speaker'>Dr. Greg Wilson</span>",
+            "track-2": "Methods in Neuro-AI by <span class='speaker'>Hamza Abdelhedi</span>"
+          }
+        },
+        {
+          "time": "15:00-15:30",
+          "event": "Break"
+        },
+        {
+          "time": "15:30-17:30",
+          "events": {
+            "track-1": "Managing Research Software Projects by <span class='speaker'>Dr. Greg Wilson</span>",
+            "track-2": "Normative modelling by <span class='speaker'>Dr. Johanna Bayer</span>"
+          }
+        },
+        {
+          "time": "17:30-19:30",
+          "event": "Networking event"
         }
       ]
     },
@@ -212,7 +235,11 @@
         },
         {
           "time": "14:30-16:00",
-          "event": "Project wrap-ups + conclusion"
+          "event": "Project wrap-ups + Closing remarks"
+        },
+        {
+          "time": "16:00-19:00",
+          "event": "Networking event"
         }
       ]
     }
@@ -242,7 +269,7 @@
     }
   ],
   "organizers": [
-    "Michelle Wang",  
+    "Michelle Wang",
     "Mathieu Dugré",
     "Clara El Khantour",
     "Julia Katharina Pfarr"

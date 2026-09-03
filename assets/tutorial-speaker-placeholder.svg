@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-labelledby="title desc">
+  <title id="title">Speaker photo placeholder</title>
+  <desc id="desc">A simple illustrated portrait placeholder for a tutorial speaker.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#d9edf5"/>
+      <stop offset="1" stop-color="#8fbfd4"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" rx="48" fill="url(#background)"/>
+  <circle cx="240" cy="190" r="82" fill="#064f7d" opacity=".92"/>
+  <path d="M92 424c14-92 72-142 148-142s134 50 148 142" fill="#064f7d" opacity=".92"/>
+  <circle cx="240" cy="240" r="196" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="8"/>
+</svg>

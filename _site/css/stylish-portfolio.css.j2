@@ -1132,22 +1132,59 @@ span .speaker {
     text-align: center;
 }
 
-.tutorial-tracks {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-}
-
-.tutorial-track {
-    min-width: 0;
-    padding: 18px;
+.tutorial-schedule {
+    overflow: hidden;
     background: rgba(0, 0, 0, .22);
     border-radius: 8px;
 }
 
+.tutorial-schedule-header,
+.tutorial-schedule-row {
+    display: grid;
+    grid-template-columns: minmax(108px, max-content) repeat(2, minmax(0, 1fr));
+}
+
+.tutorial-schedule-header {
+    align-items: center;
+    background: rgba(0, 0, 0, .18);
+    border-bottom: 1px solid rgba(255, 255, 255, .16);
+}
+
+.tutorial-time-heading,
 .tutorial-track-title {
-    margin-bottom: 12px;
+    padding: 12px 18px;
+}
+
+.tutorial-time-heading {
+    font-weight: 700;
+}
+
+.tutorial-track-title {
     font-size: 16px;
+}
+
+.tutorial-schedule-row + .tutorial-schedule-row {
+    border-top: 1px solid rgba(255, 255, 255, .12);
+}
+
+.tutorial-schedule-row .schedule-time,
+.tutorial-schedule-row .schedule-event {
+    min-width: 0;
+    padding: 13px 18px;
+}
+
+.tutorial-schedule-row .schedule-event {
+    border-left: 1px solid rgba(255, 255, 255, .12);
+}
+
+.tutorial-shared-event {
+    grid-column: 2 / -1;
+    background: rgba(255, 255, 255, .05);
+    text-align: center;
+}
+
+.tutorial-mobile-track-label {
+    display: none;
 }
 
 .schedule-entry {
@@ -1248,17 +1285,43 @@ span .speaker {
         display: none;
     }
 
-    .tutorial-tracks {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
     .schedule-day {
         padding: 16px;
     }
 
-    .tutorial-track {
-        padding: 14px;
+    .tutorial-schedule-header {
+        display: none;
+    }
+
+    .tutorial-schedule-row {
+        grid-template-columns: 1fr;
+    }
+
+    .tutorial-schedule-row .schedule-time,
+    .tutorial-schedule-row .schedule-event {
+        grid-column: 1;
+        border-left: 0;
+    }
+
+    .tutorial-schedule-row .schedule-time {
+        padding: 10px 14px 3px;
+    }
+
+    .tutorial-schedule-row .schedule-event {
+        padding: 5px 14px 11px;
+    }
+
+    .tutorial-track-event + .tutorial-track-event {
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    .tutorial-mobile-track-label {
+        display: block;
+        margin-bottom: 3px;
+        font-size: .78em;
+        font-weight: 700;
+        opacity: .82;
     }
 
     .schedule-entry {
@@ -1270,6 +1333,184 @@ span .speaker {
     .schedule-time {
         font-size: .9em;
         opacity: .82;
+    }
+}
+
+/* Tutorials */
+
+.tutorials {
+    padding: 64px 0 72px;
+    color: #123247;
+    background: #f7fafb;
+    font-family: 'Comfortaa', cursive;
+}
+
+.tutorials-heading {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.tutorials-eyebrow {
+    margin: 0 0 10px;
+    color: #3f6500;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.tutorials-heading h2 {
+    margin: 0 0 12px;
+    color: #064f7d;
+    font-size: 34px;
+}
+
+.tutorials-heading > p:last-child {
+    margin: 0;
+    color: #3d5664;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.tutorial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1080px;
+    margin: 34px auto 0;
+}
+
+.tutorial-card {
+    display: flex;
+    min-width: 0;
+    padding: 24px;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #dce7ed;
+    border-top: 4px solid {{color_theme.primary}};
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(0, 49, 79, .1);
+}
+
+.tutorial-card-main {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.tutorial-speaker-photo {
+    display: block;
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+    background: #d9edf5;
+    border: 4px solid #e7f0f4;
+    border-radius: 50%;
+}
+
+.tutorial-time {
+    margin: 0 0 8px;
+    color: #3f6500;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.tutorial-card h3 {
+    margin: 0 0 12px;
+    color: #064f7d;
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.tutorial-description {
+    margin: 0;
+    color: #3d5664;
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+.tutorial-speaker-bio {
+    margin-top: 22px;
+    padding-top: 17px;
+    color: #3d5664;
+    border-top: 1px solid #dce7ed;
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.5;
+}
+
+.tutorial-speaker-label {
+    margin: 0 0 3px;
+    color: #3f6500;
+    font-family: 'Comfortaa', cursive;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.tutorial-speaker-name {
+    margin: 0 0 6px;
+    color: #064f7d;
+    font-family: 'Comfortaa', cursive;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.tutorial-speaker-bio > p:last-child {
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .tutorial-grid {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tutorials {
+        padding: 44px 0 52px;
+    }
+
+    .tutorials-heading h2 {
+        font-size: 29px;
+    }
+
+    .tutorials-heading > p:last-child {
+        font-size: 15px;
+    }
+
+    .tutorial-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 26px;
+    }
+
+    .tutorial-card {
+        padding: 20px;
+    }
+
+    .tutorial-card-main {
+        grid-template-columns: 82px minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .tutorial-speaker-photo {
+        width: 82px;
+        height: 82px;
+    }
+
+    .tutorial-card h3 {
+        font-size: 20px;
+    }
+
+    .tutorial-description {
+        font-size: 15px;
     }
 }
 

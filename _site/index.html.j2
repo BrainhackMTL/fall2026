@@ -54,6 +54,7 @@
                 <a href="#details">About</a>
                 <a href="#map">Location</a>
                 <a href="#schedule">Schedule</a>
+                <a href="#tutorials">Tutorials</a>
                 <a href="#projects">Projects</a>
                 <a href="#sponsors">Sponsors</a>
                 <a href="#contact">Contact</a>
@@ -180,18 +181,28 @@
                     {% if sched.summary is defined %}
                     <p class="schedule-day-summary">{{sched.summary}}</p>
                     {% endif %}
-                    {% if sched.tracks is defined %}
-                    <div class="tutorial-tracks">
+                    {% if sched.rows is defined %}
+                    <div class="tutorial-schedule" role="table" aria-label="{{sched.date}} tutorial schedule">
+                        <div class="tutorial-schedule-header" role="row">
+                            <span class="tutorial-time-heading" role="columnheader">Time</span>
                         {% for track in sched.tracks %}
-                        <section class="tutorial-track">
-                            <h5 class="tutorial-track-title">{{track.name}}</h5>
-                            {% for time in track.times %}
-                            <div class="schedule-entry">
-                                <span class="schedule-time">{{time.time}}</span>
-                                <span class="schedule-event">{{time.event}}</span>
-                            </div>
-                            {% endfor %}
-                        </section>
+                            <h5 class="tutorial-track-title" role="columnheader">{{track.name}}</h5>
+                        {% endfor %}
+                        </div>
+                        {% for row in sched.rows %}
+                        <div class="tutorial-schedule-row{% if row.event is defined %} tutorial-schedule-row-shared{% endif %}" role="row">
+                            <span class="schedule-time" role="rowheader">{{row.time}}</span>
+                            {% if row.event is defined %}
+                            <span class="schedule-event tutorial-shared-event" role="cell">{{row.event}}</span>
+                            {% elif row.events is defined %}
+                                {% for track in sched.tracks %}
+                            <span class="schedule-event tutorial-track-event" role="cell">
+                                <span class="tutorial-mobile-track-label">{{track.name}}</span>
+                                {{row.events[track.id]}}
+                            </span>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
                         {% endfor %}
                     </div>
                     {% elif sched.times is defined %}
@@ -208,6 +219,37 @@
 			</div>
 		</div>
     </aside>
+
+    <!-- Tutorials -->
+    <section id="tutorials" class="tutorials" aria-labelledby="tutorials-title">
+        <div class="container">
+            <header class="tutorials-heading text-center">
+                <p class="tutorials-eyebrow">October 2 · Tutorial day</p>
+                <h2 id="tutorials-title">Tutorials</h2>
+                <p>Choose a session and come ready to learn, share, and build with the Brainhack Montréal community. Session details and speaker information will be updated as they are confirmed.</p>
+            </header>
+
+            <div class="tutorial-grid">
+                {% for tutorial in tutorials %}
+                <article class="tutorial-card">
+                    <div class="tutorial-card-main">
+                        <img class="tutorial-speaker-photo" src="{{tutorial.photo}}" alt="{{tutorial.photo_alt}}" width="112" height="112">
+                        <div class="tutorial-card-copy">
+                            <p class="tutorial-time">{{tutorial.time}}</p>
+                            <h3>{{tutorial.title}}</h3>
+                            <p class="tutorial-description">{{tutorial.description}}</p>
+                        </div>
+                    </div>
+                    <div class="tutorial-speaker-bio">
+                        <p class="tutorial-speaker-label">Speaker</p>
+                        <p class="tutorial-speaker-name">{{tutorial.speaker}}</p>
+                        <p>{{tutorial.bio}}</p>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 
     <!-- Projects -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
