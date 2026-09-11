@@ -91,9 +91,9 @@
     {
       "title": "Normative modelling",
       "time": "15:30–17:30 · Track 2",
-      "description": "Tutorial description coming soon.",
+      "description": "This tutorial provides an introduction to normative modelling and brain charting, and teaches you how to train and visualise your own normative models. The tutorials will be run as online Jupyter notebooks or on the GPU machines. No background knowledge in either Python or Normative models required.",
       "speaker": "Dr. Johanna Bayer",
-      "bio": "Speaker bio coming soon.",
+      "bio": "Johanna is a PostDoc at McGill, Canada and works on normative modelling development and application, statistical data harmonisation and federated learning. She is also the Chair of the 2027 OHBM Open Science SIG and a Fellow of the Repronim Center for Reproducible Neuroimaging and the Software Sustainability Institute 2026.",
       "photo": "assets/speakers/johanna-bayer.jpeg",
       "photo_alt": "Portrait of Dr. Johanna Bayer"
     }
