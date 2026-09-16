@@ -80,11 +80,11 @@
       "photo_alt": "Portrait of Dr. Julia-Katharina Pfarr"
     },
     {
-      "title": "Methods in Neuro-AI",
+      "title": "Foundation models for M/EEG: from classical decoding to pretrained representations",
       "time": "13:00–15:00 · Track 2",
-      "description": "Tutorial description coming soon.",
+      "description": "This tutorial introduces foundation models for neural data, with examples from my own work applying them to clinical data. In the hands-on part, participants decode M/EEG signals with a classical pipeline (MNE-Python + scikit-learn) and compare it to a foundation-model approach on the same data.",
       "speaker": "Hamza Abdelhedi",
-      "bio": "Speaker bio coming soon.",
+      "bio": "Hamza Abdelhedi is a PhD student in Biomedical Engineering at Université de Montréal (Mila & CoCo Lab), working at the intersection of neuroscience and AI, on decision making and on foundation models for M/EEG and clinical data.",
       "photo": "assets/speakers/hamza-abdelhedi.jpeg",
       "photo_alt": "Portrait of Hamza Abdelhedi"
     },
@@ -140,7 +140,7 @@
           "time": "13:00-15:00",
           "events": {
             "track-1": "Managing Research Software Projects by <span class='speaker'>Dr. Greg Wilson</span>",
-            "track-2": "Methods in Neuro-AI by <span class='speaker'>Hamza Abdelhedi</span>"
+            "track-2": "Foundation models for M/EEG: from classical decoding to pretrained representations by <span class='speaker'>Hamza Abdelhedi</span>"
           }
         },
         {
