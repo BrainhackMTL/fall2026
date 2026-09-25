@@ -268,6 +268,23 @@
       "height": "200px"
     }
   ],
+  "in_kind_supporters": [
+    {
+      "name": "BRIGHT Lab",
+      "url": "https://bright-psy.org/",
+      "logo": "assets/sponsors/bright-lab.png"
+    },
+    {
+      "name": "ORIGAMI Lab",
+      "url": "https://neurodatascience.github.io/",
+      "logo": "assets/sponsors/origami-lab.png"
+    },
+    {
+      "name": "Child Mind Institute",
+      "url": "https://childmind.org/",
+      "logo": "assets/sponsors/child-mind-institute.svg"
+    }
+  ],
   "organizers": [
     "Michelle Wang",
     "Mathieu Dugré",

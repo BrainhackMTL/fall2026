@@ -341,7 +341,16 @@
             {% endfor %}
             </div>
 
-			<br><br>
+            <section class="lab-partners" aria-labelledby="lab-partners-title">
+                <h4 id="lab-partners-title" class="text-color-blue">Organizing labs and partners</h4>
+                <div class="lab-partners-grid">
+                {% for supporter in in_kind_supporters %}
+                    <a class="lab-partner-link" href="{{supporter.url}}" target="_blank" rel="noopener noreferrer">
+                        <img class="lab-partner-logo" src="{{supporter.logo}}" alt="{{supporter.name}}">
+                    </a>
+                {% endfor %}
+                </div>
+            </section>
         </div>
     </section>
 

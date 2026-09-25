@@ -485,6 +485,58 @@ hr.small {
     justify-content: center;
 }
 
+.lab-partners {
+    max-width: 1020px;
+    margin: 30px auto 40px;
+    padding: 25px 20px 0;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.lab-partners h4 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.lab-partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.lab-partner-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    height: 150px;
+    padding: 10px;
+    border-bottom: 0;
+}
+
+.lab-partner-link:focus-visible {
+    outline: 3px solid {{color_theme.primary}};
+    outline-offset: 3px;
+}
+
+.lab-partner-logo {
+    display: block;
+    width: 100%;
+    max-width: 240px;
+    height: 130px;
+    object-fit: contain;
+}
+
+@media (max-width: 767px) {
+    .lab-partners-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+
 
 /* Services */
 
