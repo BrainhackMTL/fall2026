@@ -11,5 +11,3 @@ uv.lock
 # Project specific
 _site/*.html
 _site/css/stylish-portfolio.css
-data
-
