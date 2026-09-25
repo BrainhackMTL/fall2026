@@ -1,0 +1,23 @@
+{
+  "Title": "<p>HarmoniCA: a community tool for semantic harmonization of clinical questionnaires</p>\n",
+  "Leaders": "<p>Julia-Katharina Pfarr, juliakatharina.pfarr@gmail.com, GitHub: julia-pfarr, Discord: juliakatharinapfarr</p>\n",
+  "Collaborators": "<p>Eva van Heese\nMichelle Wang, tomichellewang@gmail.com, GitHub: michellewang, Discord: michelle__wang</p>\n",
+  "Project Description": "<p>In the ENIGMA-Parkinson's Disease working group, we have developed a protocol to retrospectively harmonize over 60 different neuropsychiatric questionnaires using a combination of expert consensus and semantic textual similarity using sentence embedding models. The fine-tuned embedding model and the item-to-dimension mappings will be released to the community.</p>\n<p>The harder question, and what we want to tackle at the BrainHack, is what comes next: how do we turn this into something other researchers can actually use with their questionnaires? We are imagining a platform (HarmoniCA: Harmonizing Clinical Assessments) where users can submit new questionnaires, get automated dimension mappings from our fine-tuned model and existing inventory, and have the model continue to refine itself as new questionnaires and ratings come in.</p>\n",
+  "Link to project repository/sources": "<p>https://github.com/julia-pfarr/HarmoniCA</p>\n",
+  "Goals for Brainhack Montreal": "<p>Concrete goals for the brainhack:</p>\n<ul>\n<li>Refine the scope and architecture of the proposed tool together with research software developers (CLI vs. web app vs. Python package, hosted vs. self-hosted, etc.).</li>\n<li>Sketch a minimal viable workflow for questionnaire submission, model inference, and optional expert validation</li>\n<li>Prototype one or two components (e.g., a submission interface, a model-serving endpoint, a CI pipeline for retraining).</li>\n</ul>\n<p>We are also happy to welcome people who are interested in a more long-term collaboration and/or contribution.</p>\n",
+  "Skills": "<p>Interest in research software development, tool design. We welcome anyone who wants to contribute ideas, whether on the code, the architecture, or the UX side or on the clinical sanity of the harmonizations. If the project sounds interesting and you want to think through it with us, please join.</p>\n",
+  "Onboarding documentation / Expectations": "<p>ENIGMA-PD harmonization OSF preregistration (https://osf.io/caxzb/overview) and project website (https://enigma-infra.github.io/ENIGMA-PD/projects/ongoing/neuropsych/).</p>\n",
+  "What will participants learn?": "<ul>\n<li>contributing to a project on GitHub</li>\n<li>software development basics</li>\n</ul>\n",
+  "Data to use": null,
+  "Credit to collaborators": "<p>Project contributors will be listed in the README as contributors. If there will be a journal publication about the tool, contributors will be listed as co-authors.</p>\n",
+  "Image": null,
+  "Type": "<p>pipeline development</p>\n",
+  "Project Maturity Status": "<p>1 - prototype</p>\n",
+  "Topic": "<p>information_theory</p>\n",
+  "Tools": "<p>Machine_learning, Deep_learning</p>\n",
+  "Programming language": "<p>Python</p>\n",
+  "Modalities": "<p>not_applicable, other</p>\n",
+  "Git skills": "<p>2 - branches and pull requests</p>\n",
+  "Anything else?": null,
+  "issue_number": "1"
+}
