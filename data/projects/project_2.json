@@ -1,0 +1,23 @@
+{
+  "Title": "<p>Refining Agent Skills for Data Science Tasks With WikiSkill</p>\n",
+  "Leaders": "<p>Brent McPherson</p>\n",
+  "Collaborators": null,
+  "Project Description": "<p>The goal of the project is to use the recently proposed WikiSkill framework (https://arxiv.org/html/2608.27454v1) to test and evaluate skills. WikiSkill evaluates skills by pulling together session history and logs to parse how effectively a skill performed. The goal is to identify if the user needed to redirect or override decisions the skill made. With enough tracked invocations of a skill, the framework has it's own process of refining the skill to better match it's defined goal based on user interactions. This allows skills to be refined based over time based on their intended usage. Further, the performance of skills on different models can be compared more quantitatively.</p>\n",
+  "Link to project repository/sources": "<p>git@github.com:bcmcpher/wikiskill.git\nhttps://huggingface.co/papers/2608.27454</p>\n",
+  "Goals for Brainhack Montreal": "<p>The goal is to create a framework for evaluating and refining skill performance. With the local workstations, we can easily evaluate skills across different models. Whether you are interested in using this framework to refine a specifc skill you're working on or if you want to explore further how we can evaluate agent performance, we'll be doing both.</p>\n",
+  "Skills": "<ul>\n<li>Some programming experience - enough to evaluate if you skill is being useful</li>\n<li>Agentic Harness workflows - skills, agents, hooks, etc. (Claude Code, OpenCode, etc.)</li>\n<li>LLM Models</li>\n</ul>\n",
+  "Onboarding documentation / Expectations": "<p>I'm not expecting contributions back to this repo - there is no official wikiskill tooling yet, so mine is one of several unofficial setups that exist.</p>\n<p>You can either: refine a skill you're interested in developing with this framework or help us figure out how we can better quantify skill performance.</p>\n",
+  "What will participants learn?": "<p>We'll learn working with coding harnesses alongside skill creation and evaluation.</p>\n",
+  "Data to use": "<p>There is no data that will be provided or that is required for this project.</p>\n",
+  "Credit to collaborators": "<p>Contributors to my WikiSkill repo will be added to the README.</p>\n",
+  "Image": null,
+  "Type": "<p>pipeline development</p>\n",
+  "Project Maturity Status": "<p>1 - prototype</p>\n",
+  "Topic": "<p>reproducible_scientific_methods</p>\n",
+  "Tools": "<p>other</p>\n",
+  "Programming language": "<p>other</p>\n",
+  "Modalities": "<p>not_applicable</p>\n",
+  "Git skills": "<p>1 - commit and push</p>\n",
+  "Anything else?": null,
+  "issue_number": "2"
+}
