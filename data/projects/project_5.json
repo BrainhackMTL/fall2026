@@ -1,0 +1,23 @@
+{
+  "Title": "<p>Get ENIGMA Addiction Nipoppy- and Neurobagel-ized</p>\n",
+  "Leaders": "<p>Anthony Juliano: Anthony.Juliano@uvm.edu</p>\n",
+  "Collaborators": "<p>Nipoppy Group\nNeurobagel Group</p>\n",
+  "Project Description": "<p>-What will the project do: Allow the neuroimaging community at-large to view what data (at all levels) is available in the ENIGMA Addiction's WG in order to put in project proposals for papers and grant submissions.</p>\n<p>-Who is it for: Everyone. Anyone with the appropriate knowledge set (i.e. a PI) or background (i.e. coder) who is interested in completing a scientific project using ENIGMA Addiction data</p>\n<p>-Why does it matter: Open science and transparency</p>\n<p>-How can contributors get started: Send an email to Anthony.Juliano@uvm.edu, especially if you are knowledgable in BIDS formatting and further yet especially with pooling data from multiple different sites (phenotypic data and neuroimaging data (base files and all kinds of derivatives). In general if you can code and you can organize, we would be thrilled to have you!</p>\n<p>-Key Resources:\nhttps://bids-specification.readthedocs.io/en/stable/\nhttps://nipoppy.readthedocs.io/en/stable/\nhttps://neurobagel.org/</p>\n",
+  "Link to project repository/sources": null,
+  "Goals for Brainhack Montreal": "<p>Get all 200+ datasets formatted for nipoppy to recognize them so that way we can combine that with neurobagel to make a truly searchable database.</p>\n",
+  "Skills": "<p>-Python (any level)</p>\n",
+  "Onboarding documentation / Expectations": "<p>Do not have.</p>\n",
+  "What will participants learn?": "<p>-How to create, maintain, and expand on multi-site datasets in BIDS formatting</p>\n",
+  "Data to use": "<p>Not yet available. Hence the neurobagel and nipoppy endeavors :D</p>\n",
+  "Credit to collaborators": "<p>I am open, but I am not the PI of ENIGMA Addiction, so can make no guarantees.</p>\n",
+  "Image": "<img width=\"651\" height=\"804\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/054e461a-4ac5-4dba-874f-3aded01c3e38\" />",
+  "Type": "<p>data management</p>\n",
+  "Project Maturity Status": "<p>3 - mature project</p>\n",
+  "Topic": "<p>reproducible_scientific_methods, other</p>\n",
+  "Tools": "<p>Jupyter</p>\n",
+  "Programming language": "<p>Python</p>\n",
+  "Modalities": "<p>behavioral, DWI, fMRI, MRI, TDCS, TMS, other</p>\n",
+  "Git skills": "<p>not applicable</p>\n",
+  "Anything else?": "<p>If you are interested in Addiction research (or even development/lifespan research), you will walk away knowing exactly what types of data that we have (and that I have already curated). Knowing that before anyone else (including myself, or at least until the end of the brainhack) will allow you to brainstorm your own ideas for a project proposal using the full depth and breadth of ENIGMA Addiction data.</p>\n<p>That's the best I got for now.</p>\n",
+  "issue_number": "5"
+}
