@@ -1,0 +1,23 @@
+{
+  "Title": "<p>TRUST-MRI: Uncertainty-aware MRI Segmentation on Imputed data</p>\n",
+  "Leaders": "<p>Hadrien Padilla, Siddhesh Salfale, Ninad Aithal, Charlotte Livingston, Axel Cera</p>\n",
+  "Collaborators": null,
+  "Project Description": "<p>TRUST-MRI is a trust-aware, multimodal medical imaging framework designed to improve MRI reconstruction, missing-modality imputation, and automated annotation. The framework integrates complementary MRI sequences, such as T1-weighted, T2-weighted, FLAIR, and diffusion imaging when available, to recover missing information and generate segmentation masks while explicitly estimating the reliability of its predictions.</p>\n<p>Unlike conventional pipelines that produce reconstructed images or annotations without adequately characterizing their limitations, TRUST-MRI incorporates uncertainty estimation, cross-modal consistency, and adaptive refinement. High-uncertainty regions trigger targeted reconstruction, segmentation refinement, or expert review, helping identify potentially misleading synthetic images and unreliable annotations.</p>\n<p>The framework will be evaluated on multimodal MRI datasets using reconstruction quality, segmentation accuracy, uncertainty calibration, error-detection performance, and annotation efficiency. Comparisons against existing imputation and segmentation methods will assess whether trust-guided refinement improves downstream analysis under realistic missing-modality conditions.</p>\n<p>Objective: Develop a modular, trust-aware multimodal MRI pipeline that combines missing-modality imputation, automated annotation, uncertainty estimation, and adaptive correction.</p>\n<p>Potential contribution: A unified reliability-guided framework that connects MRI imputation and annotation, identifies regions where synthetic or predicted information may be unreliable, and prioritizes them for further analysis or human review.</p>\n",
+  "Link to project repository/sources": null,
+  "Goals for Brainhack Montreal": "<ul>\n<li>Develop a preliminary TRUST-MRI prototype for trust-aware multimodal MRI imputation and automated annotation.</li>\n<li>Integrate uncertainty estimation and cross-modal consistency to identify unreliable reconstructions and segmentation predictions.</li>\n<li>Implement uncertainty-guided refinement to prioritize regions requiring further processing or expert review.</li>\n<li>Evaluate reconstruction quality, annotation accuracy, and reliability using existing multimodal MRI datasets.</li>\n<li>Release a reproducible, open-source pipeline to support further development of trustworthy AI tools for neuroimaging.</li>\n</ul>\n",
+  "Skills": "<p>MRI Data Processing: Python, NumPy, NiBabel, and TorchIO for loading, preprocessing, and aligning multimodal MRI sequences. Beginner-friendly: dataset exploration, visualization, and basic preprocessing.</p>\n<p>Deep Learning and Imputation: PyTorch and pretrained medical imaging models for missing-modality reconstruction. Beginner-friendly: running pretrained models and comparing reconstructed images with ground truth.</p>\n<p>Segmentation and Annotation: MONAI, nnU-Net, SAM/MedSAM, and 3D Slicer for automated segmentation and annotation refinement. Beginner-friendly: reviewing segmentation masks, correcting annotations, and visualizing results.</p>\n<p>Uncertainty Estimation: Python and statistical methods to estimate prediction variance, cross-modal disagreement, and voxel-level reliability. Beginner-friendly: implementing simple variance maps and uncertainty visualizations.</p>\n<p>Evaluation and Visualization: Computing SSIM, MAE, Dice score, and uncertainty–error correlations; creating figures and comparison tables. Beginner-friendly: benchmarking existing models and documenting results.</p>\n<p>Documentation and Collaboration: Git/GitHub, experiment tracking, literature review, and scientific writing. Beginner-friendly: documenting workflows, reviewing related papers, testing code, and preparing tutorials.</p>\n",
+  "Onboarding documentation / Expectations": null,
+  "What will participants learn?": null,
+  "Data to use": null,
+  "Credit to collaborators": null,
+  "Image": null,
+  "Type": "<p>pipeline development</p>\n",
+  "Project Maturity Status": "<p>0 - project idea</p>\n",
+  "Topic": "<p>data_visualisation, deep_learning</p>\n",
+  "Tools": "<p>Deep_learning</p>\n",
+  "Programming language": "<p>Python</p>\n",
+  "Modalities": "<p>fMRI</p>\n",
+  "Git skills": "<p>0 - no git skills</p>\n",
+  "Anything else?": null,
+  "issue_number": "7"
+}
