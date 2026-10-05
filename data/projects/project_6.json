@@ -1,0 +1,23 @@
+{
+  "Title": "<p>QC-Studio - A web-based quality control (QC) application for neuroimaging data.</p>\n",
+  "Leaders": "<p>Nikhil Bhagwat</p>\n",
+  "Collaborators": null,
+  "Project Description": "<h2>🎯 Goals</h2>\n<ul>\n<li>Create an interactive web app to visualize neuroimaging data - raw and processed!</li>\n<li>Support multiple image types: 3D MRI (NIfTI), 2D image montages, and IQM metrics</li>\n<li>Enable structured quality control ratings through a clean, intuitive interface</li>\n</ul>\n",
+  "Link to project repository/sources": "<p>https://github.com/nipoppy/qc-studio/tree/main</p>\n",
+  "Goals for Brainhack Montreal": "<ul>\n<li>[ ] Gather user feedback 📋</li>\n<li>[ ] Fix UI bugs 🐛</li>\n<li>[ ] Add cool features 😎</li>\n</ul>\n",
+  "Skills": "<ul>\n<li>Python 🐍</li>\n<li>NiiVue / Streamlit (Optional) 💻</li>\n<li>Interest in QC / Neuroanatomy / UI design  🧠</li>\n</ul>\n",
+  "Onboarding documentation / Expectations": null,
+  "What will participants learn?": "<ul>\n<li>Neuroimaging QC workflows</li>\n<li>Python based web-apps</li>\n<li>The dark side of vibe coding</li>\n</ul>\n",
+  "Data to use": "<p>Some sample data is provided in the repo.</p>\n",
+  "Credit to collaborators": null,
+  "Image": null,
+  "Type": "<p>visualization</p>\n",
+  "Project Maturity Status": "<p>1 - prototype</p>\n",
+  "Topic": "<p>data_visualisation</p>\n",
+  "Tools": "<p>other</p>\n",
+  "Programming language": "<p>Python</p>\n",
+  "Modalities": "<p>MRI</p>\n",
+  "Git skills": "<p>2 - branches and pull requests</p>\n",
+  "Anything else?": null,
+  "issue_number": "6"
+}
